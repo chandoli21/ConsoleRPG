@@ -1,3 +1,5 @@
+import 'monster.dart';
+
 class Character {
   String name;
   int health;
