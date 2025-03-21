@@ -40,8 +40,9 @@ class Game {
 
       if (input == '1') {
         player!.attackMonster(monster);
+        // print('${player!.name}이(가) ${monster.name}에게 피해를 입혔습니다.');
       } else if (input == '2') {
-        player!.defend();
+        player!.defend(monster);
       }
 
       if (monster.health > 0) {
@@ -64,7 +65,15 @@ class Game {
   }
 
   void saveResult(String result) {
-    var file = File('result.txt');
-    file.writeAsStringSync('${player!.name}, ${player!.health}, $result');
+    print("결과를 저장하시겠습니까? (y/n)");
+    String? input = stdin.readLineSync();
+
+    if (input != null && input.toLowerCase() == 'y') {
+      var file = File('result.txt');
+      file.writeAsStringSync('${player!.name}, ${player!.health}, $result');
+      print("결과가 result.txt 파일에 저장되었습니다.");
+    } else {
+      print("결과 저장이 취소되었습니다.");
+    }
   }
 }

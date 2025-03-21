@@ -10,9 +10,10 @@ class Monster {
   Monster(this.name, this.health, this.maxAttackPower);
 
   void attackCharacter(Character character) {
-    int attackPower = max(0, maxAttackPower - character.defensePower);
-    character.health -= attackPower;
-    print('$name이(가) ${character.name}에게 $attackPower의 피해를 입혔습니다.');
+    int attackPower = max(character.defensePower, Random().nextInt(maxAttackPower + 1));
+    int damage = max(0, attackPower - character.defensePower);
+    character.health -= damage;
+    print('$name이(가) ${character.name}에게 $damage의 피해를 입혔습니다.');
   }
 
   void showStatus() {

@@ -15,8 +15,11 @@ class Character {
     print('$name이(가) ${monster.name}에게 $damage의 피해를 입혔습니다.');
   }
 
-  void defend() {
-    print('$name이(가) 방어 태세를 취합니다.');
+  void defend(Monster monster) {
+    int monsterAttackPower = monster.maxAttackPower;
+    int damage = monsterAttackPower - defensePower;
+    int recoveredHealth = damage > 0 ? damage : 0;
+    print('$name이(가) 방어 태세를 취합니다. 체력이 $recoveredHealth만큼 회복되었습니다.');
   }
 
   void showStatus() {
