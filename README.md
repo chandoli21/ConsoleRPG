@@ -1,66 +1,76 @@
-## **📌 Dart 심화 - 전투 RPG 게임**  
+# **Dart RPG Battle Game**  
 
-### **📝 프로젝트 개요**  
-이 프로젝트는 **Dart 언어를 사용하여 간단한 전투 RPG 게임**을 구현하는 과제입니다.  
-게임에서는 **캐릭터와 몬스터 간의 전투**가 이루어지며, 플레이어는 공격 및 방어를 선택하여 몬스터를 물리쳐야 합니다.  
-또한, **파일 입출력 기능을 활용하여 게임 데이터를 저장 및 불러오는 기능**이 포함됩니다.  
+## **📌 Project Overview**  
+This project is a **simple turn-based battle RPG game** implemented in Dart.  
+Players control a **character that battles against multiple monsters**, making strategic choices such as attacking or defending.  
+The game also includes **file input/output functionality** to load and save game data.  
 
-### **📂 프로젝트 구조**  
+---
+
+## **📂 Project Structure**  
 ```
 📂 RPG_Game
- ├── 📄 character.dart    # 캐릭터 클래스 정의
- ├── 📄 monster.dart      # 몬스터 클래스 정의
- ├── 📄 game.dart         # 게임 진행 로직
- ├── 📄 file_io.dart      # 파일 입출력 기능
- ├── 📄 main.dart         # 게임 실행 파일
- ├── 📄 characters.txt    # 캐릭터 정보 저장 파일
- ├── 📄 monsters.txt      # 몬스터 정보 저장 파일
- ├── 📄 result.txt        # 게임 결과 저장 파일
- ├── 📄 README.md         # 프로젝트 설명 파일
+ ├── 📄 character.dart    # Defines the Character class
+ ├── 📄 monster.dart      # Defines the Monster class
+ ├── 📄 game.dart         # Game logic and mechanics
+ ├── 📄 file_io.dart      # File input/output functions
+ ├── 📄 main.dart         # Entry point to run the game
+ ├── 📄 characters.txt    # Stores character data
+ ├── 📄 monsters.txt      # Stores monster data
+ ├── 📄 result.txt        # Saves game results
+ ├── 📄 README.md         # Project documentation
 ```
 
-### **⚙️ 필수 기능 구현**  
-✅ **객체 지향 프로그래밍 활용**  
-- `Character`(캐릭터), `Monster`(몬스터), `Game`(게임) 클래스를 설계하여 **게임 구조를 객체 지향적으로 구현**  
+---
 
-✅ **전투 시스템**  
-- 캐릭터는 매 턴 공격 또는 방어를 선택할 수 있으며,  
-  몬스터는 랜덤으로 선택되어 전투가 진행됨  
+## **⚙️ Implemented Features**  
 
-✅ **파일 입출력**  
-- `characters.txt`와 `monsters.txt`에서 데이터를 불러와 캐릭터 및 몬스터를 생성  
-- 게임 종료 후 결과 (`result.txt`) 저장  
+✅ **Object-Oriented Design**  
+- Uses classes (`Character`, `Monster`, `Game`) to structure the game logically  
 
-✅ **게임 종료 조건**  
-- 캐릭터의 체력이 0이 되면 **게임 오버 (패배)**  
-- 모든 몬스터를 처치하면 **게임 클리어 (승리)**  
+✅ **Turn-Based Combat System**  
+- Players can choose to attack or defend each turn  
+- Monsters are randomly selected for battles  
 
-### **🚀 실행 방법**  
+✅ **File Input/Output**  
+- Loads character and monster data from `characters.txt` and `monsters.txt`  
+- Saves game results to `result.txt`  
 
-#### **1️⃣ 프로젝트 클론**
+✅ **Game End Conditions**  
+- If the character’s health reaches 0 → **Game Over (Defeat)**  
+- If all monsters are defeated → **Game Cleared (Victory)**  
+
+---
+
+## **🚀 How to Run the Game**  
+
+### **1️⃣ Clone the Repository**
 ```sh
 git clone <repository_url>
 cd RPG_Game
 ```
 
-#### **2️⃣ Dart 실행**
+### **2️⃣ Run the Game**
 ```sh
 dart main.dart
 ```
 
-#### **3️⃣ 게임 진행 예시**
+### **3️⃣ Sample Gameplay**
 ```
-게임을 시작합니다!
-용사님의 체력: 100, 공격력: 20, 방어력: 5
-슬라임이 등장했습니다!
-행동을 선택하세요: 1. 공격  2. 방어
+The game has started!
+Hero's stats: Health: 100, Attack: 20, Defense: 5
+A Slime has appeared!
+Choose an action: 1. Attack  2. Defend
 > 1
-용사가 슬라임을 공격하여 15의 피해를 입혔습니다.
-슬라임이 반격하여 2의 피해를 입었습니다.
+Hero attacks Slime, dealing 15 damage.
+Slime counterattacks, dealing 2 damage.
 ...
-게임 승리! 결과가 저장되었습니다.
+You defeated all monsters! Game saved.
 ```
 
-### **📩 Contact**  
-궁금한 점이 있으면 언제든지 질문해주세요! 😊  
+---
+
+## **📩 Contact**  
+If you have any questions, feel free to ask through the email below:  
 chandoli21@gmail.com
+Happy Coding! 🚀  
